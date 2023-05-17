@@ -15,6 +15,7 @@ $(document).ready(function(){
 buttonLoad=$("#buttonLoadStudents");
 dropdownStudents=$("#dropDownStudents");
 fieldStudentName=$("#fieldStudentName");
+fieldStudentSurname=$("#fieldStudentSurname");
 fieldStudentId=$("#fieldStudentId");
 labelStudentId=$("#labelStudentId");
 labelStudentName=$("#labelStudentName");
@@ -64,7 +65,7 @@ function addStudent(){
        studentName= fieldStudentName.val();
        studentSurname= fieldStudentSurname.val();
        studentId=fieldStudentId.val();
-       jsonData={studentId:studentId,name: studentName};
+       jsonData={studentId:studentId,name: studentName,surname: studentSurname};
 
        $.ajax({
         type: "POST",
