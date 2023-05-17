@@ -73,14 +73,14 @@ function addStudent(){
         data: JSON.stringify(jsonData),
         contentType: "application/json"
        }).done(function(message){
-       selectNewlyAddedStudent(studentId, studentName);
+       selectNewlyAddedStudent(studentId, studentName, studentSurname );
        }).fail(function(){
        alert("failed");
        });
 }
 
-function selectNewlyAddedStudent(studentId, studentName){
-    $("<option>").val(studentId).text(studentName).appendTo(dropdownStudents);
+function selectNewlyAddedStudent(studentId, studentName,studentSurname){
+    $("<option>").val(studentId).text(studentName +" " + studentSurname).appendTo(dropdownStudents);
     $("#dropDownStudents option[value='"+studentId+"']").prop("selected",true);
     fieldStudentName.val("");
     fieldStudentSurname.val("");
@@ -91,8 +91,11 @@ function selectNewlyAddedStudent(studentId, studentName){
 function changeFormStateToSelectStudent(){
     selectedStudentName=$("#dropDownStudents option:selected").text();
     selectedStudentId=$("#dropDownStudents option:selected").val();
-
-    fieldStudentName.val(selectedStudentName);
+    arr = selectedStudentName.split(" ");
+    selectedStudentName1=arr[0];
+    selectedStudentSurname=arr[1];
+    fieldStudentName.val(selectedStudentName1);
+    fieldStudentSurname.val(selectedStudentSurname);
     fieldStudentId.val(selectedStudentId);
     labelStudentName.text("Selected Student:");
     buttonAdd.prop("value","New");
@@ -104,8 +107,9 @@ function updateStudent(){
        url= "/student";
        studentId=dropdownStudents.val();
        studentName= fieldStudentName.val();
+       studentSurname= fieldStudentSurname.val();
        studentId=fieldStudentId.val();
-       jsonData={studentId:studentId,name: studentName};
+       jsonData={studentId:studentId,name: studentName,surname: studentSurname};
 
        $.ajax({
         type: "PUT",
