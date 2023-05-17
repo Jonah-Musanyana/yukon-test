@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeLeaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+    <title>User info</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src='script.js' type='text/javascript'></script>
+
+</head>
+
+<div th:fragment="navigation"></div>
+<div th:replace="fragments/navigation::navigation"></div>
+<div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active p-3" id="students" role="tabpanel" aria-labelledby="students-tab">
+        <div th:fragment="content" th:remove="tag">
+            <div>
+                <input type="button" value="Load Student List" id="buttonLoadStudents" class="btn btn-primary m-2"/>
+            </div>
+            <div class="col-sm-11">
+                <select id="dropDownStudents" class="form-control m-4 " style="height:300px" size="2">
+                </select>
+            </div>
+            <div class="form-group row">
+                <label for="labelStudentId" class="col-sm-1 col-form-label mt-2" id="labelStudentId">Student Id:</label>
+                <div class="col-sm-2 row">
+                    <input type="text" class="form-control mt-2" id="fieldStudentId" required/>
+                </div>
+                <label for="labelStudentName" class="col-sm-1 col-form-label mt-2" id="labelStudentName">Name:</label>
+                <div class="col-sm-2 row">
+                    <input type="text" class="form-control mt-2" id="fieldStudentName" required/>
+                </div>
+                <label for="labelStudentSurname" class="col-sm-1 col-form-label mt-2" id="labelStudentSurname">Surname:</label>
+                <div class="col-sm-3 row">
+                    <input type="text" class="form-control mt-2" id="fieldStudentSurname" required/>
+                </div>
+                <div class="col-sm-2 mt-2">
+                    <input type="button" value="Add" id="buttonAdd" class="btn btn-secondary mr-2" />
+                    <input type="button" value="Update" id="buttonUpdate" class="btn btn-secondary mr-2" disabled/>
+                    <input type="button" value="Delete" id="buttonDelete" class="btn btn-secondary" disabled/>
+                </div>
+            </div>
+
+        </div>
+
+        <script th:src="@{/js/students.js}">
+
+        </script>
+
+
+    </div>
+
+</div>
+</html>

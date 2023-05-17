@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.thymeleaf.org ">
+<div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active p-3" id="teachers" role="tabpanel" aria-labelledby="teachers-tab">
+        <div th:fragment="content" th:remove="tag">
+            <div>
+                <input type="button" value="Load teacher List" id="buttonLoadTeachers" class="btn btn-primary m-2"/>
+            </div>
+            <div class="col-sm-11">
+                <select id="dropDownTeachers" class="form-control m-4 " style="height:300px" size="2">
+                </select>
+            </div>
+            <div class="form-group row">
+                <label for="labelTeacherId" class="col-sm-1 col-form-label mt-2" id="labelTeacherId">Teacher Id:</label>
+                <div class="col-sm-3 row">
+                    <input type="text" class="form-control mt-2" id="fieldTeacherId" required/>
+                </div>
+                <label for="labelTeacherName" class="col-sm-1 col-form-label mt-2" id="labelTeacherName">Name:</label>
+                <div class="col-sm-3 row">
+                    <input type="text" class="form-control mt-2" id="fieldTeacherName" required/>
+                </div>
+                <div class="col-sm-4 mt-2">
+                    <input type="button" value="Add" id="buttonAdd" class="btn btn-secondary mr-2" />
+                    <input type="button" value="Update" id="buttonUpdate" class="btn btn-secondary mr-2" disabled/>
+                    <input type="button" value="Delete" id="buttonDelete" class="btn btn-secondary" disabled/>
+                </div>
+            </div>
+
+        </div>
+
+        <script th:src="@{/js/teachers.js}">
+
+        </script>
+
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
