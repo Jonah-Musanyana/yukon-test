@@ -1,4 +1,4 @@
-# Student Teacher Mgmt System
+# Student Teacher Management System
 
 A Web application to create, update, read and delete students and teachers
 
