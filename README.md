@@ -39,15 +39,15 @@ Before running this project, ensure you have the following installed:
    git clone https://github.com/your-username/your-project.git
    
 2. Navigate to the project directory:
-   
-   cd your-project
+    ```shell
+    cd your-project
    
 3. Build the project using Maven:
-  
+   ```shell
    mvn clean install
 
 4. Configure the database connection in the application.properties file located in the src/main/resources directory:
-   
+      ```shell
    spring.datasource.url=jdbc:mysql://localhost:3306/your-database
    spring.datasource.username=your-username
    spring.datasource.password=your-password
