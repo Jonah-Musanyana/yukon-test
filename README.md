@@ -53,10 +53,12 @@ Before running this project, ensure you have the following installed:
    spring.datasource.password=your-password
    
 5. Run the application:
-  
+   ```shell
    mvn spring-boot:run
 
-6. The Spring Boot application will be accessible at http://localhost:8080.
+6. The Spring Boot application will be accessible at 
+ ```shell
+ http://localhost:8080.
    
 ## Usage
 
