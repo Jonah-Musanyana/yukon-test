@@ -57,7 +57,6 @@ Before running this project, ensure you have the following installed:
    mvn spring-boot:run
 
 6. The Spring Boot application will be accessible at 
- ```shell
  http://localhost:8080.
    
 ## Usage
@@ -65,13 +64,21 @@ Before running this project, ensure you have the following installed:
 Explain how users can use your project. Provide examples and code snippets if applicable. You can also include screenshots or GIFs to showcase the application's functionality.
 
 ![Alt Text](./images/1.png)
+### figure 1. 
 ![Alt Text](./images/2.png)
+### figure 2. 
 ![Alt Text](./images/3.png)
+### figure 3. 
 ![Alt Text](./images/4.png)
+### figure 4. 
 ![Alt Text](./images/5.png)
+### figure 5. 
 ![Alt Text](./images/6.png)
+### figure 6. 
 ![Alt Text](./images/7.png)
+### figure 7. 
 ![Alt Text](./images/8.png)
+### figure 8. 
 
 ## Contributing
 
